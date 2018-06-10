@@ -14,7 +14,8 @@ def create
 
     respond_to do |format|
       if @portfolio_items.save
-        format.html { redirect_to @portfolios_url, notice: 'Portfolio was successfully created.' }
+      	#if i give redirect_to @portfolio-items it will go to the show page
+        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
        # format.json { render :show, status: :created, location: @portfolio_items }
       else
         format.html { render :new }
@@ -25,7 +26,7 @@ def create
 end
 
 def edit
-	@portfolio_items=Portfolio.find(params[:id])
+	#@portfolio_items=Portfolio.find(params[:id])
 end
 
 
@@ -56,6 +57,8 @@ end
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully destroyed.' }
     end
+end
 
 
 end
+
