@@ -1,0 +1,2 @@
+class AsdfController < ApplicationController
+end
